@@ -726,6 +726,7 @@ nav ul li a:hover {
 
 .problems-solved-icon {
     width: 50px;
+    margin: auto;
     margin-bottom: 0.5rem;
 }
 
@@ -772,6 +773,7 @@ nav ul li a:hover {
 .problems-solved-details {
     flex-basis: 50%;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .service-area-section {
