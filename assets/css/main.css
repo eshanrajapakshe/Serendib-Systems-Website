@@ -31,6 +31,10 @@
     background-color: var(--red) !important;
 }
 
+.bg-color-offWhite {
+    background-color: #e0e5ec;
+}
+
 ::-webkit-scrollbar {
     width: 13px;
 }
@@ -680,7 +684,6 @@ nav ul li a:hover {
 
 .problems-solved-main {
     margin-top: 3rem;
-    margin-bottom: 3rem;
     background-color: aliceblue;
     border-radius: 20px;
     padding: 2rem;
@@ -722,8 +725,8 @@ nav ul li a:hover {
 }
 
 .problems-solved-icon {
-    width: 70px;
-    margin-right: 1rem;
+    width: 50px;
+    margin-bottom: 0.5rem;
 }
 
 .problems-solved-icon img {
@@ -732,22 +735,23 @@ nav ul li a:hover {
 
 .problems-solved-inner-title {
     color: #393939;
-    font-size: 20px;
+    font-size: 15px;
     vertical-align: top;
     margin-bottom: 3px;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .problems-solved-inner-sub-title {
     margin-top: 7px;
     margin-bottom: 0;
-    font-weight: 500;
+    font-weight: 400;
     color: #696969;
+    font-size: 14px;
 }
 
 .problems-solved-secondry {
-    margin-bottom: -6.8rem;
     display: flex;
+    flex-wrap: wrap;
     border-radius: 6px;
 }
 
@@ -766,10 +770,8 @@ nav ul li a:hover {
 }
 
 .problems-solved-details {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    padding: 8px;
+    flex-basis: 50%;
+    margin-bottom: 1rem;
 }
 
 .service-area-section {
@@ -801,7 +803,7 @@ nav ul li a:hover {
 
 .our-services-section {
     background-color: #e0e5ec;
-    padding-top: 6rem;
+    padding-top: 4rem;
     padding-bottom: 4rem;
 }
 
@@ -940,12 +942,12 @@ nav ul li a:hover {
 }
 
 .software-desc {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .explore-more {
     color: #ffffff;
-    margin-top: 2rem;
+    margin-top: 1rem;
     display: inline-block;
     font-size: 17px;
     padding: .3125rem 0.5rem;
@@ -954,7 +956,7 @@ nav ul li a:hover {
     text-decoration: none !important;
     background: var(--red);
     background: linear-gradient(to left, rgb(255 56 65 / 73%) 50%, var(--blue) 50%) right;
-    background-size: 200%;
+    background-size: 201%;
     transition: .5s ease-out;
 }
 
@@ -1077,7 +1079,7 @@ nav ul li a:hover {
 }
 
 .product-logo {
-    width: 220px;
+    width: 220px !important;
     margin: 0 0 2rem;
 }
 
@@ -1269,165 +1271,30 @@ background-color: #00010c; */
     display: grid;
     grid-gap: 1rem;
     padding: 1rem;
-    max-width: 1024px;
     margin: 0 auto;
 }
 
 @media (min-width: 600px) {
     .page-content {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
 @media (min-width: 800px) {
     .page-content {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 .card {
     border: 0;
+    border-radius: 10px;
     position: relative;
     display: flex;
-    align-items: flex-end;
     overflow: hidden;
-    padding: 1rem;
     width: 100%;
-    text-align: center;
-    color: whitesmoke;
     background: #e0e5ec;
     box-shadow: 5px 5px 10px rgb(163 177 198 / 60%), -5px -5px 10px rgb(255 255 255 / 50%);
-}
-
-@media (min-width: 600px) {
-    .card {
-        height: 350px;
-    }
-}
-
-.card:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: contain;
-    background-position: center 25%;
-    transition: transform calc(var(--d) * 1.5) var(--e);
-    pointer-events: none;
-    background-repeat: no-repeat;
-}
-
-.card:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    background-color: #100e17;
-    transform: translateY(100.5%);
-    transition: transform calc(var(--d) * 2) var(--e);
-}
-
-.card:nth-child(1):before {
-    background-image: url(../images/services/software-dev.png);
-}
-
-.card:nth-child(2):before {
-    background-image: url(../images/services/marketing.png);
-}
-
-.card:nth-child(3):before {
-    background-image: url(../images/services/software-dev.png);
-}
-
-.card:nth-child(4):before {
-    background-image: url(../images/services/marketing.png);
-}
-
-.content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 1rem;
-    transition: transform var(--d) var(--e);
-    z-index: 1;
-    min-height: 236px;
-}
-
-.content>*+* {
-    margin-top: 1rem;
-}
-
-.title {
-    font-size: 1.2rem;
-    font-weight: 500;
-    line-height: 1.2;
-    color: #212529;
-    text-transform: uppercase;
-}
-
-.copy {
-    font-family: var(--font-serif);
-    font-size: 1.125rem;
-    font-style: italic;
-    line-height: 1.35;
-}
-
-@media (hover: hover) and (min-width: 600px) {
-    .content {
-        transform: translateY(95%);
-    }
-
-    .content>*:not(.title) {
-        opacity: 0;
-        transform: translateY(1rem);
-        transition: transform var(--d) var(--e), opacity var(--d) var(--e);
-    }
-
-    .card:hover,
-    .card:focus-within {
-        align-items: center;
-    }
-
-    .card:hover:before,
-    .card:focus-within:before {
-        transform: translateY(-4%);
-    }
-
-    .card:hover:after,
-    .card:focus-within:after {
-        transform: translateY(0%);
-    }
-
-    .card:hover .content,
-    .card:focus-within .content {
-        transform: translateY(4rem)
-    }
-
-    .card:hover .title {
-        color: #ffffff;
-    }
-
-    .card:hover .content>*:not(.title),
-    .card:focus-within .content>*:not(.title) {
-        opacity: 1;
-        transform: translateY(0);
-        transition-delay: calc(var(--d) / 8);
-    }
-
-    .card:focus-within:before,
-    .card:focus-within:after,
-    .card:focus-within .content,
-    .card:focus-within .content>*:not(.title) {
-        transition-duration: 0s;
-    }
 }
 
 /* END OUR SERVICES CARD */
@@ -1549,6 +1416,106 @@ background-color: #00010c; */
 
 .project-text-main {
     padding: 2rem;
+    background-color: rgb(0 0 0 / 35%);
+    border-radius: 20px;
 }
 
 /* END PROJECTS */
+
+/* SOFTWARE DEV SECTION */
+.software-dev-section {
+    margin-bottom: 4rem;
+}
+
+.container-soft-dev {
+    padding: 4rem 2rem;
+    border-radius: 0 20px 20px;
+    overflow: hidden;
+}
+
+.software-dev-section-sub-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--bs-gray-dark);
+    letter-spacing: -0.025em;
+}
+
+.section-intro {
+    font-size: 1.4rem;
+    margin: 3rem 0;
+    color: var(--bs-gray);
+}
+
+.soft-dev-card {
+    width: 25%;
+    margin-bottom: 30px;
+}
+
+.soft-box-desc {
+    margin: 1rem 0 0;
+    font-size: 14px;
+    color: var(--bs-red);
+    font-weight: 500;
+}
+
+.soft-box-title {
+    font-weight: 700;
+}
+
+.soft-sec-box-icon {
+    width: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.soft-dev-card .box {
+    padding: 30px 30px;
+    margin-bottom: 0;
+    height: 100%;
+}
+
+.work-strategy-main ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.work-strategy-main ul li span {
+    color: green;
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+
+.work-strategy-main ul li h6 {
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.work-strategy-main ul li {
+    margin-bottom: 0.5rem;
+    color: var(--bs-gray);
+    font-weight: 400;
+    display: flex;
+    align-items: flex-start;
+}
+
+.work-strategy-wrapper {
+    padding: 0 1rem 1rem;
+    border-radius: 10px;
+}
+
+.work-strategy-wrapper h5 {
+    margin-bottom: 1.5rem;
+    color: midnightblue;
+    margin: 0 -1rem 1rem;
+    padding: 1rem;
+    background-color: cornflowerblue;
+    border-radius: 10px 10px 0 0;
+}
+
+.explore-more-software-dev-btn {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* END SOFTWARE DEV SECTION */
