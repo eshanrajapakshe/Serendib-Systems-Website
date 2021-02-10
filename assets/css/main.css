@@ -1528,6 +1528,21 @@ body { background: aliceblue; }
 .testimonials {
   position: relative;
 }
+
+.testimonials .test-heading {
+    font-size: 30px;
+    font-weight: 700;
+    color: #313e4b;
+    margin-bottom: 0px;
+    margin-top: 1.5rem;
+}
+.testimonials .test-heading span {
+    font-weight: 300;
+    color: #02a2c4;
+    margin: 0;
+
+}
+
 @media (max-width: 767px) {
   .testimonials {
     margin-top: 20px;
@@ -1571,7 +1586,6 @@ body { background: aliceblue; }
 .testimonials .card {
   background: #fff;
   box-shadow: 0 8px 30px -7px #c9dff0;
-  margin: 0 20px;
   padding: 0 10px;
   border-radius: 20px;
   border: 0;
