@@ -49,6 +49,7 @@ $(document).ready(function () {
             items: 3,
             loop: true,
             margin: 30,
+            dots: true,
             autoplay: true,
             autoplayTimeout: 4000,
             autoplayHoverPause: true
@@ -57,39 +58,42 @@ $(document).ready(function () {
 
 (function () {
       "use strict";
-    
+
       var carousels = function () {
-        $(".owl-carousel1").owlCarousel({
-          loop: true,
-          center: true,
-          margin: 30,
-          dots: false,
-          responsiveClass: true,
-          nav: false,
-          responsive: {
-            0: {
-              items: 1,
-              nav: false
-            },
-            680: {
-              items: 2,
-              nav: false,
-              loop: false
-            },
-            1000: {
-              items: 3,
-              nav: true
-            }
-          }
-        });
+            $(".owl-carousel1").owlCarousel({
+                  loop: true,
+                  center: true,
+                  margin: 30,
+                  dots: false,
+                  responsiveClass: true,
+                  nav: false,
+                  autoplay: true,
+                  autoplayTimeout: 6000,
+                  autoplayHoverPause: true,
+                  responsive: {
+                        0: {
+                              items: 1,
+                              nav: false
+                        },
+                        680: {
+                              items: 2,
+                              nav: false,
+                              loop: false
+                        },
+                        1000: {
+                              items: 3,
+                              nav: true
+                        }
+                  }
+            });
       };
-    
+
       (function ($) {
-        carousels();
+            carousels();
       })(jQuery);
-    })();
-    
-    
-    
+})();
+
+
+
 
 
