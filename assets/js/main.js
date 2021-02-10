@@ -43,15 +43,53 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-      $('.owl-carousel').owlCarousel();
+      var owl = $('.owl-carousel');
+
+      owl.owlCarousel({
+            items: 3,
+            loop: true,
+            margin: 30,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true
+      });
 });
 
-var owl = $('.owl-carousel');
-owl.owlCarousel({
-    items:3,
-    loop:true,
-    margin:30,
-    autoplay:true,
-    autoplayTimeout:4000,
-    autoplayHoverPause:true
-});
+(function () {
+      "use strict";
+    
+      var carousels = function () {
+        $(".owl-carousel1").owlCarousel({
+          loop: true,
+          center: true,
+          margin: 30,
+          dots: false,
+          responsiveClass: true,
+          nav: false,
+          responsive: {
+            0: {
+              items: 1,
+              nav: false
+            },
+            680: {
+              items: 2,
+              nav: false,
+              loop: false
+            },
+            1000: {
+              items: 3,
+              nav: true
+            }
+          }
+        });
+      };
+    
+      (function ($) {
+        carousels();
+      })(jQuery);
+    })();
+    
+    
+    
+
+
